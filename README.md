@@ -77,11 +77,6 @@ You can directely change the git repositories using the gits tools:
 
      gits sync <manifest> -s <sources directory>
 
-The manifest can be a "default" one or a file you give.
-You can list the available "default" manifests calling:
-
-     gits list-manifests
-
 To clean a target, use the option '-c cleanall':
 
     bitbake -c cleanall <package name>
@@ -102,27 +97,27 @@ All data will be lost. SD Card partitions must be unmounted.
 How it works
 ------------
 
-layers first will use gits, with the manifest in the target file, to get the git repositories. It then create the bblayers.conf file, finding the path of the layers into the repositories. To finish, it create the local.conf by copying the one in the base directory and adding the local, machine et distro variable from the target file.
+layers first will use gits, with the manifest in the target file, to get the git repositories. It then create the bblayers.conf file, finding the path of the layers into the repositories. To finish, it create the local.conf by copying the one in the base directory and adding the local, machine and distro variable from the target file.
 
 Examples
 --------
 
 Get the bitbake build directory and sources for sabrelite target:
 
-    layers config sabrelite
+    layers config targets/sabrelite-wayland
 
 Reconfigure the bitbake build directory without changing the sources:
 
-    layers config sabrelite -f -n
+    layers config targets/sabrelite-wayland -f -n
 
 Get the bitbake build directory for sabrelite and nitrogen targets, using the sabrelite sources for both:
 
-    layers config sabrelite -s sources
-    layers config nitrogen -s sources -n
+    layers config targets/sabrelite-wayland -s sources
+    layers config targets/nitrogen-wayland -s sources -n
 
 Change the source state of the directory sources to use the manifest master:
 
-    gits sync master -s sources
+    gits sync manifests/master -s sources
 
 Problems
 --------
