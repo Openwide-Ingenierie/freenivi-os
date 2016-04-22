@@ -1,8 +1,0 @@
-bitbake,git://github.com/openembedded/bitbake.git,2.20,HEAD
-oe-core,git://github.com/openembedded/oe-core.git,dora,HEAD
-meta-intel,git://git.yoctoproject.org/meta-intel,dora,HEAD
-meta-raspberrypi,git://git.yoctoproject.org/meta-raspberrypi,dora,HEAD
-meta-qt5 https://github.com/meta-qt5/meta-qt5.git,dora,HEAD
-meta-fsl-arm,https://github.com/Freescale/meta-fsl-arm.git,dora,HEAD
-meta-ivi,git://git.yoctoproject.org/meta-ivi,5.0,HEAD
-meta-freenivi,https://github.com/Openwide-Ingenierie/meta-freenivi.git,master,HEAD
